@@ -92,7 +92,13 @@
         <activity android:name=".superagente.ConformidadComercioConsumos" />
         <activity android:name=".superagente.VoucherPagoConsumo" />
         <activity android:name=".superagente.IngresoMontoPagoFirmaConsumos" />
-        <activity android:name=".superagente.IngresoMontoPagoFirmaServicios"></activity>
+        <activity android:name=".superagente.IngresoMontoPagoFirmaServicios" />
+        <activity android:name=".superagente.RecargaTelefonica" />
+        <activity android:name=".superagente.SeleccionMedPagoRecarga" />
+        <activity android:name=".superagente.SeleccionTarjetaRecarga" />
+        <activity android:name=".superagente.MontoPagoRecarga" />
+        <activity android:name=".superagente.ConformidadClienteRecarga" />
+        <activity android:name=".superagente.VoucherRecargaTelefonica"></activity>
     </application>
 
 </manifest>

@@ -650,4 +650,61 @@
 
     <string name="titulo_ingreso_monto_pago_firma_servicios">INGRESO DEL MONTO DE PAGO - CON FIRMA</string>
 
+    <!-- pantalla de recargas - Principal -->
+    <string name="titulo_recarga_telefonica">SELECCIÓN DE OPERADOR TELEFÓNICO PARA RECARGA</string>
+    <string name="tv_nro_telefono">NRO. DE TELÉFONO :</string>
+    <string name="tv_operador">OPERADOR :</string>
+    <string name="tv_selec_monto">SELECCIONAR MONTO :</string>
+    <string name="btn_regresar_menu">REGRESAR MENÚ</string>
+    <string name="btn_salir_recarga">SALIR</string>
+
+    <!-- pantalla de recargas - Seleccion Medio Pago -->
+    <string name="tv_titulo_recarga_medPago">SELECCIÓN MEDIO DE PAGO</string>
+    <string name="rdb_recarga_tarjeta">TARJETA</string>
+    <string name="rdb_recarga_efectivo">EFECTIVO</string>
+    <string name="tv_nota_recarga_medPago">LA TARJETA DE CARGO PUEDE SER DE DEBITO O PREPAGO DE CUALQUIER BANCO O DE CRÉDITO DE OTRO BANCO</string>
+
+    <!-- pantalla de recargas - Seleccion Tarjeta Pago -->
+    <string name="tv_titulo_recarga_tarjetaPago">SELECCIONE LA TARJETA DE PAGO</string>
+
+    <!-- pantalla de recargas - Monto Pago -->
+    <string name="tv_titulo_recarga_montoPago">MONTO DE PAGO - CON PIN</string>
+    <string name="tv_nom_cliRecarga">NOMBRE DEL CLIENTE :</string>
+    <string name="tv_tarjeta_cifradaRecarga">TARJETA CIFRADA :</string>
+    <string name="tv_ingresa_pinRecarga">INGRESE PIN :</string>
+    <string name="btn_continuarRecarga">CONTINUAR</string>
+
+    <!-- pantalla de recargas - Monto Pago -->
+    <string name="tv_titulo_recarga_conforCli">CONFORMIDAD DEL CLIENTE</string>
+    <string name="tv_nom_cli_confor_Recarga">NOMBRE DEL CLIENTE :</string>
+    <string name="tv_nro_confor_cliRecarga">NÚMERO DE TELEFONO :</string>
+    <string name="tv_tarje_confor_cliRecarga">TARJETA DE PAGO :</string>
+    <string name="tv_comi_confor_cliRecarga">COMISIÓN DE RECARGA :</string>
+    <string name="tv_total_confor_cliRecarga">TOTAL :</string>
+    <string name="btn_confor_confirmaRecarga">CONFIRMAR OPERACIÓN</string>
+    <string name="tv_resp_confor_cliRecarga">CRISTOPHER TORRES</string>
+
+    <!-- pantalla de recargas - Monto Pago -->
+    <string name="tv_titulo_recarga_voucherCli">VOUCHER DE RECARGA TELEFÓNICA</string>
+    <string name="tv_fecha_voucher_Recarga">FECHA:</string>
+    <string name="tv_hora_voucher_Recarga">HORA:</string>
+    <string name="tv_nroUnico_voucher_Recarga">NÚMERO ÚNICO:</string>
+    <string name="tv_recarga_voucher_Recarga">RECARGA:</string>
+    <string name="tv_fonoTarjeta_voucher_Recarga">TELÉFONO/TARJETA:</string>
+    <string name="tv_importe_voucher_Recarga">IMPORTE:</string>
+    <string name="tv_comision_voucher_Recarga">COMISIÓN DE RECARGA:</string>
+    <string name="tv_total_voucher_Recarga">TOTAL PAGADO:</string>
+    <string name="tv_formPago_voucher_Recarga">FORMA DE PAGO:</string>
+    <string name="tv_banco_voucher_Recarga">BANCO:</string>
+    <string name="tv_nroTarjeta_voucher_Recarga">NRO. DE TARJETA:</string>
+
+    <string name="tv_notaPin_voucher_Recarga">PIN VERIFICADO POR EL EMISOR</string>
+
+    <string name="btn_otraOpe_voucher_Recarga">EFECTUAR OTRA OPERACIÓN</string>
+    <string name="btn_otraReca_voucher_Recarga">EFECTUAR OTRA RECARGA</string>
+
+
+
+
+
 </resources>

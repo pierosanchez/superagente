@@ -28,6 +28,7 @@ public class MenuCliente extends Activity {
         btn_pago_servicios = (Button) findViewById(R.id.ckbox_pago_servicios);
         btn_cambio_clave = (Button) findViewById(R.id.ckbox_cambio_clave);
         btn_pago_consumos = (Button) findViewById(R.id.ckbox_pago_consumos);
+        ckbox_recargas = (Button) findViewById(R.id.ckbox_recargas);
 
         LinearLayout salir_menu = (LinearLayout) findViewById(R.id.salir_menu);
 

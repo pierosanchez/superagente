@@ -103,8 +103,7 @@
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:text="@string/ckbox_recargas"
-                    android:textSize="20dp"
-                    android:visibility="gone"/>
+                    android:textSize="20dp" />
 
                 <Button
                     android:id="@+id/ckbox_transferencias"

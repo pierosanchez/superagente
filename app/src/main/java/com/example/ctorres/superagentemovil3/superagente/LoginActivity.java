@@ -1,16 +1,15 @@
 package com.example.ctorres.superagentemovil3.superagente;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.Window;
@@ -20,17 +19,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-
 import com.example.ctorres.superagentemovil3.R;
-import com.example.ctorres.superagentemovil3.dao.CuentasUsuarioAdapter;
 import com.example.ctorres.superagentemovil3.dao.SuperAgenteDaoImplement;
 import com.example.ctorres.superagentemovil3.dao.SuperAgenteDaoInterface;
 import com.example.ctorres.superagentemovil3.entity.UsuarioEntity;
-import com.example.ctorres.superagentemovil3.utils.Constante;
-import com.example.ctorres.superagentemovil3.utils.Utils;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class LoginActivity extends Activity {
 

@@ -1,9 +1,14 @@
 package com.example.ctorres.superagentemovil3.superagente;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -25,6 +30,10 @@ public class InformacionDomicilioElectronicaPersonal extends Activity {
     String dni;
     ArrayList<UsuarioEntity> usuarioEntityArrayList;
     GetUsuarioReniecAdapter getUsuarioReniecAdapter;
+    private final int INTERNET=1;
+    private final int ACCESS_NETWORK_STATE=2;
+    private final int CHANGE_NETWORK_STATE=3;
+    private final int ACCESS_WIFI_STATE=4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +61,10 @@ public class InformacionDomicilioElectronicaPersonal extends Activity {
             @Override
             public void onClick(View v) {
 
-                InformacionDomicilioElectronicaPersonal.ValidarUsuarioDireccion valida = new InformacionDomicilioElectronicaPersonal.ValidarUsuarioDireccion();
-                valida.execute();
+                ActivityCompat.requestPermissions(InformacionDomicilioElectronicaPersonal.this, new String[] {Manifest.permission.INTERNET}, INTERNET);
+
+                /*InformacionDomicilioElectronicaPersonal.ValidarUsuarioDireccion valida = new InformacionDomicilioElectronicaPersonal.ValidarUsuarioDireccion();
+                valida.execute();*/
 
                 /*Intent sanipesIntent = new Intent(InformacionDomicilioElectronicaPersonal.this, ClaveAcceso.class);
                 sanipesIntent.putExtra("usuario", usuario);
@@ -127,6 +138,27 @@ public class InformacionDomicilioElectronicaPersonal extends Activity {
             txt_provincia.setText(usuarioEntityArrayList.get(0).getProvincia());
             txt_direccion.setText(usuarioEntityArrayList.get(0).getDireccion());
             txt_distrito.setText(usuarioEntityArrayList.get(0).getDistrito());
+        }
+    }
+
+    private void askPermission(String permission, int requestCode){
+        if (ContextCompat.checkSelfPermission(this, permission)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
+        } else if (ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(this, "Permission already Granted", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch(requestCode){
+            case INTERNET:
+                if (grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED) {
+                    InformacionDomicilioElectronicaPersonal.ValidarUsuarioDireccion valida = new InformacionDomicilioElectronicaPersonal.ValidarUsuarioDireccion();
+                    valida.execute();
+                } else {
+                    Toast.makeText(this, "Permission denided", Toast.LENGTH_LONG).show();
+                }
         }
     }
 }

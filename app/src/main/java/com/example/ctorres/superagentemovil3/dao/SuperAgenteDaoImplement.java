@@ -71,6 +71,41 @@ public class SuperAgenteDaoImplement implements SuperAgenteDaoInterface {
     }
 
     @Override
+    public ArrayList<OperadorEntity> ListarOperador() {
+
+        ArrayList<OperadorEntity> listaOperador = new ArrayList<>();
+
+        String url = Constante.IPORHOST + "webApi_2/apigeneral/ApiGeneral/ListadoOperador/";
+
+        try {
+            JSONArray jsonArray = utils.getJSONArrayfromURL(url);
+            if (jsonArray != null) {
+                if (jsonArray.length() > 0) {
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        OperadorEntity operadorEntity = new OperadorEntity();
+                        operadorEntity.setOpe_ide(Integer.parseInt(utils.getValueStringOrNull(jsonObject, "ope_id")));
+                        operadorEntity.setOpe_ruc(utils.getValueStringOrNull(jsonObject, "ope_ruc"));
+                        operadorEntity.setOpe_razonsoc(utils.getValueStringOrNull(jsonObject, "ope_razonsoc"));
+                        operadorEntity.setOpe_nomcomercial(utils.getValueStringOrNull(jsonObject, "ope_nomcomercial"));
+                        listaOperador.add(operadorEntity);
+                    }
+                } else {
+                    listaOperador = null;
+                }
+            } else {
+                listaOperador = null;
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return listaOperador;
+    }
+
+    @Override
     public ArrayList<CuentaEntity> DetalleCuenta(String id_Tarjeta) {
 
         ArrayList<CuentaEntity> listaTarjeta = new ArrayList<>();
