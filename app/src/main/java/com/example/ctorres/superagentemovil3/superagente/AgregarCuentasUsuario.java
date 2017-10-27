@@ -54,7 +54,7 @@ public class AgregarCuentasUsuario extends Activity {
         usuario = bundle.getParcelable("usuario");
         cliente = bundle.getString("cliente");
 
-        cargarBancos();
+        //cargarBancos();
 
         bancosEntityArrayList = null;
         bancosAdapter = new BancosAdapter(bancosEntityArrayList, getApplication());

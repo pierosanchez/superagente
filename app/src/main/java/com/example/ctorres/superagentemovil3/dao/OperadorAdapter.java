@@ -78,8 +78,8 @@ public class OperadorAdapter extends BaseAdapter {
         TextView tv_operadora;
     }
 
-    public void setNewListOperador(ArrayList<OperadorEntity> listOpreradora){
-        items = listOpreradora;
+    public void setNewListOperador(ArrayList<OperadorEntity> listBeneficiario){
+        items = listBeneficiario;
     }
 
 

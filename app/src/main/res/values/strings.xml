@@ -657,6 +657,7 @@
     <string name="tv_selec_monto">SELECCIONAR MONTO :</string>
     <string name="btn_regresar_menu">REGRESAR MENÚ</string>
     <string name="btn_salir_recarga">SALIR</string>
+    <string name="btn_siguiente_recarga">SIGUIENTE</string>
 
     <!-- pantalla de recargas - Seleccion Medio Pago -->
     <string name="tv_titulo_recarga_medPago">SELECCIÓN MEDIO DE PAGO</string>
